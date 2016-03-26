@@ -61,12 +61,12 @@ function login() {
         $("#password").focus();
          return false;
     }
-    if($("#captcha").val() == "")
-    {
-        $("#captcha").focus();
-        layer.alert('请输入验证码', {icon : 5,shift : 6,time : 0});
-         return false;
-    }
+//    if($("#captcha").val() == "")
+//    {
+//        $("#captcha").focus();
+//        layer.alert('请输入验证码', {icon : 5,shift : 6,time : 0});
+//         return false;
+//    }
     $("#loginform").submit();
 }
 

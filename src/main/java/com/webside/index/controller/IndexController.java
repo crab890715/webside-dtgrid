@@ -89,15 +89,15 @@ public class IndexController extends BaseController {
 	public String userLogin(String accountName, String password, String captcha, HttpServletRequest request) {
 		UsernamePasswordToken token = null;
 		try {
-			 //从session中取出servlet生成的验证码text值
-	        String expected = (String) request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
-	        //获取用户页面输入的验证码
-	        if(!captcha.equalsIgnoreCase(expected))
-	        {
-	        	request.setAttribute("error", "验证码错误！");
-				return "/login";
-	        }else
-	        {
+//			 //从session中取出servlet生成的验证码text值
+//	        String expected = (String) request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
+//	        //获取用户页面输入的验证码
+//	        if(!captcha.equalsIgnoreCase(expected))
+//	        {
+//	        	request.setAttribute("error", "验证码错误！");
+//				return "/login";
+//	        }else
+//	        {
 				// 想要得到Subject对象,访问地址必须在shiro的拦截地址内,不然会报空指针
 				Subject subject = SecurityUtils.getSubject();
 				token = new UsernamePasswordToken(accountName, password);
@@ -115,7 +115,7 @@ public class IndexController extends BaseController {
 					request.setAttribute("error", "用户名或密码不正确！");
 					return "/login";
 				}
-	        }
+//	        }
 		} catch (LockedAccountException e) {
 			token.clear();
 			request.setAttribute("error", "用户已经被锁定不能登录，请与管理员联系！");

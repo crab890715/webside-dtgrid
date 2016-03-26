@@ -108,7 +108,7 @@
 
 		<!-- 配置监控统计拦截的filters -->
 		<property name="filters" value="${druid.filters}" />
-		<property name="connectionProperties" value="${druid.connectionProperties}" />
+		<!-- <property name="connectionProperties" value="${druid.connectionProperties}" /> -->
 	</bean>
 
 	<!-- 使用sqlSessionFactoryBean工厂产生SqlSession对象，方便后期注入Dao -->

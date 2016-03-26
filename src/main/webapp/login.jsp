@@ -120,10 +120,12 @@ if ("${error}" != "") {
 													<i class="ace-icon icon-lock"></i>
 												</span>
 												</label>
+												<%-- 
 												<label class="block clearfix"> 
 													<input id="captcha" name="captcha" type="text" class="form-control" placeholder="验证码" style="width:60%;float:left;"/>
 												<img id="kaptchaImage" src="${ctx }/captcha.html" style="cursor:pointer; margin-left:10px;" title="点击更换"/>  
-												</label>
+												</label> 
+												--%>
 
 												<div class="space"></div>
 

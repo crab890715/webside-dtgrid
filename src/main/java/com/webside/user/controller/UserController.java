@@ -250,8 +250,8 @@ public class UserController extends BaseController {
 		try
 		{
 			//生成随机密码
-			String password = RandomUtil.generateString(6);
-			
+//			String password = RandomUtil.generateString(6);
+			String password = "123456";
 			//加密用户输入的密码，得到密码和加密盐，保存到数据库
 			UserEntity user = EndecryptUtils.md5Password(userEntity.getAccountName(), password, 2);
 			//设置添加用户的密码和加密盐
